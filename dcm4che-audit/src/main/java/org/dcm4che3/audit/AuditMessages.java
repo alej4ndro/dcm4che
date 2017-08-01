@@ -609,36 +609,30 @@ public class AuditMessages {
 
     }
 
-    public static EventIdentification createEventIdentification(
-            EventID eventID, String action, Calendar eventDateTime,
-            String outcome, String outcomeDescription, org.dcm4che3.audit.EventTypeCode... types) {
+    public static EventIdentification createEventIdentification(BuildEventIdentification eventIdentification) {
         EventIdentification ei = new EventIdentification();
-        ei.setEventID(eventID);
-        ei.setEventDateTime(
-                eventDateTime != null ? eventDateTime : Calendar.getInstance());
-        ei.setEventActionCode(action);
-        ei.setEventOutcomeIndicator(outcome);
-        ei.setEventOutcomeDescription(outcomeDescription);
-        for (org.dcm4che3.audit.EventTypeCode type : types)
+        ei.setEventID(eventIdentification.eventID);
+        ei.setEventDateTime(eventIdentification.eventDateTime);
+        ei.setEventActionCode(eventIdentification.eventActionCode);
+        ei.setEventOutcomeIndicator(eventIdentification.outcome);
+        ei.setEventOutcomeDescription(eventIdentification.outcomeDesc);
+        for (org.dcm4che3.audit.EventTypeCode type : eventIdentification.eventTypeCode)
             ei.getEventTypeCode().add(type);
         return ei;
     }
 
-    public static ActiveParticipant createActiveParticipant(
-            String userID, String altUserID, String name, boolean requestor,
-            String napID, String napTypeCode, MediaType mediaType,
-            RoleIDCode... roleIDs) {
-        ActiveParticipant ap = new ActiveParticipant();
-        ap.setUserID(userID);
-        ap.setAlternativeUserID(altUserID);
-        ap.setUserName(name);
-        ap.setUserIsRequestor(requestor);
-        ap.setNetworkAccessPointID(napID);
-        ap.setNetworkAccessPointTypeCode(napTypeCode);
-        ap.setMediaType(mediaType);
-        for (RoleIDCode roleID : roleIDs)
-            ap.getRoleIDCode().add(roleID);
-        return ap;
+    private static ActiveParticipant createActiveParticipant(BuildActiveParticipant buildActiveParticipant) {
+        ActiveParticipant activeParticipant = new ActiveParticipant();
+        activeParticipant.setUserID(buildActiveParticipant.userID);
+        activeParticipant.setAlternativeUserID(buildActiveParticipant.altUserID);
+        activeParticipant.setUserName(buildActiveParticipant.userName);
+        activeParticipant.setUserIsRequestor(buildActiveParticipant.requester);
+        activeParticipant.setNetworkAccessPointID(buildActiveParticipant.napID);
+        activeParticipant.setNetworkAccessPointTypeCode(buildActiveParticipant.napTypeCode);
+        activeParticipant.setMediaType(buildActiveParticipant.mediaType);
+        for (RoleIDCode roleID : buildActiveParticipant.roleIDCode)
+            activeParticipant.getRoleIDCode().add(roleID);
+        return activeParticipant;
     }
 
    public static AuditSourceIdentification createAuditSourceIdentification(
@@ -671,25 +665,19 @@ public class AuditMessages {
         return pod;
     }
 
-    public static ParticipantObjectIdentification createParticipantObjectIdentification(
-            String id, ParticipantObjectIDTypeCode idType, String name,
-            byte[] query, String type, String role, String lifeCycle,
-            String sensitivity, ParticipantObjectDescription desc,
-            ParticipantObjectDetail... details) {
-        ParticipantObjectIdentification poi = new ParticipantObjectIdentification();
-        poi.setParticipantObjectID(id);
-        poi.setParticipantObjectIDTypeCode(idType);
-        poi.setParticipantObjectName(name);
-        poi.setParticipantObjectQuery(query);
-        poi.setParticipantObjectTypeCode(type);
-        poi.setParticipantObjectTypeCodeRole(role);
-        poi.setParticipantObjectDataLifeCycle(lifeCycle);
-        poi.setParticipantObjectSensitivity(sensitivity);
-        poi.setParticipantObjectDescription(desc);
-        if (null != details)
-            for (ParticipantObjectDetail detail : details)
-                poi.getParticipantObjectDetail().add(detail);
-        return poi;
+    private static ParticipantObjectIdentification createParticipantObjectIdentification(
+            BuildParticipantObjectIdentification buildParticipantObjectIdentification) {
+        ParticipantObjectIdentification participantObjectIdentification = new ParticipantObjectIdentification();
+        participantObjectIdentification.setParticipantObjectID(buildParticipantObjectIdentification.id);
+        participantObjectIdentification.setParticipantObjectIDTypeCode(buildParticipantObjectIdentification.idType);
+        participantObjectIdentification.setParticipantObjectName(buildParticipantObjectIdentification.name);
+        participantObjectIdentification.setParticipantObjectQuery(buildParticipantObjectIdentification.query);
+        participantObjectIdentification.setParticipantObjectTypeCode(buildParticipantObjectIdentification.type);
+        participantObjectIdentification.setParticipantObjectTypeCodeRole(buildParticipantObjectIdentification.role);
+        participantObjectIdentification.setParticipantObjectDataLifeCycle(buildParticipantObjectIdentification.lifeCycle);
+        participantObjectIdentification.setParticipantObjectSensitivity(buildParticipantObjectIdentification.sensitivity);
+        participantObjectIdentification.setParticipantObjectDescription(buildParticipantObjectIdentification.desc);
+        return participantObjectIdentification;
     }
 
     public static ParticipantObjectDetail createParticipantObjectDetail(
@@ -841,41 +829,15 @@ public class AuditMessages {
         return b.toString();
     }
 
-    public static List<ActiveParticipant> getApList(BuildActiveParticipant... aps) {
-        List<ActiveParticipant> apList = new ArrayList<>();
-        for (BuildActiveParticipant ap: aps)
-            apList.add(AuditMessages.createActiveParticipant(ap.userID, ap.altUserID, ap.userName, ap.requester,
-                    ap.napID, ap.napTypeCode, ap.mediaType, ap.roleIDCode));
-        return apList;
-    }
-
-    public static List<ParticipantObjectIdentification> getPoiList(BuildParticipantObjectIdentification... pois) {
-        List<ParticipantObjectIdentification> poiList = new ArrayList<>();
-        if (pois != null)
-            for (BuildParticipantObjectIdentification poi: pois)
-                poiList.add(getPOI(poi));
-        return poiList;
-    }
-
-    static ParticipantObjectIdentification getPOI(BuildParticipantObjectIdentification poi) {
-        return AuditMessages.createParticipantObjectIdentification(poi.id, poi.idType, poi.name, poi.query, poi.type,
-                poi.role, poi.lifeCycle, poi.sensitivity, poi.desc, poi.detail);
-    }
-
-    public static EventIdentification getEI(BuildEventIdentification ei) {
-        return AuditMessages.createEventIdentification(ei.eventID, ei.eventActionCode, ei.eventDateTime,
-                ei.outcome, ei.outcomeDesc, ei.eventTypeCode);
-    }
-
-    public static AuditMessage createMessage(EventIdentification ei, List<ActiveParticipant> apList,
-                                        List<ParticipantObjectIdentification> poiList) {
+    public static AuditMessage createMessage(BuildEventIdentification ei, BuildActiveParticipant[] buildActiveParticipants,
+                                        BuildParticipantObjectIdentification... buildParticipantObjectIdentifications) {
         AuditMessage msg = new AuditMessage();
-        msg.setEventIdentification(ei);
-        for (ActiveParticipant ap : apList)
-            msg.getActiveParticipant().add(ap);
-        if (poiList != null)
-            for (ParticipantObjectIdentification poi : poiList)
-                msg.getParticipantObjectIdentification().add(poi);
+        msg.setEventIdentification(AuditMessages.createEventIdentification(ei));
+        for (BuildActiveParticipant buildActiveParticipant : buildActiveParticipants)
+            msg.getActiveParticipant().add(createActiveParticipant(buildActiveParticipant));
+        for (BuildParticipantObjectIdentification buildParticipantObjectIdentification : buildParticipantObjectIdentifications)
+            msg.getParticipantObjectIdentification().add(
+                    createParticipantObjectIdentification(buildParticipantObjectIdentification));
         return msg;
     }
 

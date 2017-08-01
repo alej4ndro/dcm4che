@@ -57,7 +57,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.HashSet;
 
 
 /**
@@ -97,24 +96,31 @@ public class AuditAuth {
         }
     }
 
-    private static EventIdentification getEI(AuditLogger log, Event event) {
+    private static BuildEventIdentification getEI(AuditLogger log, Event event) {
         String outcome = event.getError() != null
                 ? AuditMessages.EventOutcomeIndicator.MinorFailure : AuditMessages.EventOutcomeIndicator.Success;
         EventTypeCode etc = event.getType().equals(EventType.LOGIN) || event.getType().equals(EventType.LOGIN_ERROR)
                 ? AuditMessages.EventTypeCode.Login : AuditMessages.EventTypeCode.Logout;
-        BuildEventIdentification ei = new BuildEventIdentification.Builder(AuditMessages.EventID.UserAuthentication,
+        return new BuildEventIdentification.Builder(AuditMessages.EventID.UserAuthentication,
                 AuditMessages.EventActionCode.Execute, log.timeStamp(), outcome).outcomeDesc(event.getError())
                 .eventTypeCode(etc).build();
-        return AuditMessages.getEI(ei);
     }
 
     private static void sendAuditMessage(Path file, Event event, AuditLogger log) throws IOException{
         AuthInfo info = new AuthInfo(new LineReader(file).getMainInfo());
-        BuildActiveParticipant ap1 = new BuildActiveParticipant.Builder(
-                info.getField(AuthInfo.USER_NAME), info.getField(AuthInfo.IP_ADDR)).requester(true).build();
-        BuildActiveParticipant ap2 = new BuildActiveParticipant.Builder(log.getDevice().getDeviceName(),
-                log.getConnections().get(0).getHostname()).altUserID(log.processID()).requester(false).build();
-        AuditMessage msg = AuditMessages.createMessage(getEI(log, event), AuditMessages.getApList(ap1, ap2), null);
+        BuildActiveParticipant[] buildActiveParticipants = new BuildActiveParticipant[2];
+        buildActiveParticipants[0] = new BuildActiveParticipant.Builder(
+                                        info.getField(AuthInfo.USER_NAME),
+                                        info.getField(AuthInfo.IP_ADDR))
+                                        .requester(true)
+                                        .build();
+        buildActiveParticipants[1] = new BuildActiveParticipant.Builder(
+                                        log.getDevice().getDeviceName(),
+                                        log.getConnections().get(0).getHostname())
+                                        .altUserID(AuditLogger.processID())
+                                        .requester(false)
+                                        .build();
+        AuditMessage msg = AuditMessages.createMessage(getEI(log, event), buildActiveParticipants);
         msg.getAuditSourceIdentification().add(log.createAuditSourceIdentification());
         try {
             log.write(log.timeStamp(), msg);
