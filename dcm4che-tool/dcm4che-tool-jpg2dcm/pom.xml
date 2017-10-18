@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>dcm4che-tool</artifactId>
-    <groupId>org.dcm4che.tool</groupId>
+    <groupId>quibim.dcm4che.tool</groupId>
     <version>5.10.5</version>
     <relativePath>..</relativePath>
   </parent>
@@ -11,12 +11,12 @@
   <description>JPEG to DICOM Converter</description>
   <dependencies>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-core</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che.tool</groupId>
+      <groupId>quibim.dcm4che.tool</groupId>
       <artifactId>dcm4che-tool-common</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
@@ -26,7 +26,7 @@
       <artifactId>slf4j-log4j12</artifactId>
     </dependency>
     <dependency>
-        <groupId>org.dcm4che</groupId>
+        <groupId>quibim.dcm4che</groupId>
         <artifactId>dcm4che-imageio</artifactId>
         <version>${project.version}</version>
     </dependency>

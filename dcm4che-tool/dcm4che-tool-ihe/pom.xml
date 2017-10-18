@@ -42,7 +42,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>dcm4che-tool</artifactId>
-    <groupId>org.dcm4che.tool</groupId>
+    <groupId>quibim.dcm4che.tool</groupId>
     <version>5.10.5</version>
   </parent>
   <groupId>org.dcm4che.tool.ihe</groupId>

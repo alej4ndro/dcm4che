@@ -18,7 +18,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/audit/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-audit</include>
+        <include>quibim.dcm4che:dcm4che-audit</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -26,7 +26,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/audit-keycloak/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-audit-keycloak</include>
+        <include>quibim.dcm4che:dcm4che-audit-keycloak</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -34,7 +34,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/conf/api/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-conf-api</include>
+        <include>quibim.dcm4che:dcm4che-conf-api</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -42,7 +42,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/conf/api-hl7/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-conf-api-hl7</include>
+        <include>quibim.dcm4che:dcm4che-conf-api-hl7</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -50,7 +50,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/conf/json/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-conf-json</include>
+        <include>quibim.dcm4che:dcm4che-conf-json</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -58,7 +58,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/conf/ldap/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-conf-ldap</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -66,7 +66,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/conf/ldap-audit/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-conf-ldap-audit</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap-audit</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -74,7 +74,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/conf/ldap-hl7/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-conf-ldap-hl7</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap-hl7</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -82,7 +82,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/conf/ldap-imageio/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-conf-ldap-imageio</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap-imageio</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -90,7 +90,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/core/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-core</include>
+        <include>quibim.dcm4che:dcm4che-core</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -98,7 +98,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/dcmr/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-dcmr</include>
+        <include>quibim.dcm4che:dcm4che-dcmr</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -106,7 +106,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/dict-arc/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-dict-arc</include>
+        <include>quibim.dcm4che:dcm4che-dict-arc</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -114,7 +114,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/emf/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-emf</include>
+        <include>quibim.dcm4che:dcm4che-emf</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -122,7 +122,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/hl7/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-hl7</include>
+        <include>quibim.dcm4che:dcm4che-hl7</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -130,7 +130,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/image/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-image</include>
+        <include>quibim.dcm4che:dcm4che-image</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -138,7 +138,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/imageio/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-imageio</include>
+        <include>quibim.dcm4che:dcm4che-imageio</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -146,7 +146,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/imageio-rle/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-imageio-rle</include>
+        <include>quibim.dcm4che:dcm4che-imageio-rle</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -154,7 +154,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/json/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-json</include>
+        <include>quibim.dcm4che:dcm4che-json</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -162,7 +162,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/mime/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-mime</include>
+        <include>quibim.dcm4che:dcm4che-mime</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -170,7 +170,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/net/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-net</include>
+        <include>quibim.dcm4che:dcm4che-net</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -178,7 +178,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/net-audit/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-net-audit</include>
+        <include>quibim.dcm4che:dcm4che-net-audit</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -186,7 +186,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/net-hl7/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-net-hl7</include>
+        <include>quibim.dcm4che:dcm4che-net-hl7</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -194,7 +194,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/net-imageio/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-net-imageio</include>
+        <include>quibim.dcm4che:dcm4che-net-imageio</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -202,7 +202,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/soundex/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-soundex</include>
+        <include>quibim.dcm4che:dcm4che-soundex</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>
@@ -210,7 +210,7 @@
     <dependencySet>
       <outputDirectory>/modules/org/dcm4che/ws-rs/main</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-ws-rs</include>
+        <include>quibim.dcm4che:dcm4che-ws-rs</include>
       </includes>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <useProjectArtifact>false</useProjectArtifact>

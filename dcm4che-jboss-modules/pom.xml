@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.dcm4che</groupId>
+    <groupId>quibim.dcm4che</groupId>
     <artifactId>dcm4che-parent</artifactId>
     <version>5.10.5</version>
   </parent>
@@ -10,127 +10,127 @@
   <name>dcm4che-jboss-modules</name>
   <dependencies>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-audit</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-audit-keycloak</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-api</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-api-hl7</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-json</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-ldap</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-ldap-audit</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-ldap-hl7</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-ldap-imageio</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-core</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-dcmr</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-dict-arc</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-emf</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-hl7</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-image</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-imageio</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-imageio-rle</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-json</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-mime</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-net</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-net-audit</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-net-hl7</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-net-imageio</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-soundex</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-ws-rs</artifactId>
       <version>${project.version}</version>
     </dependency>

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>dcm4che-conf</artifactId>
-    <groupId>org.dcm4che</groupId>
+    <groupId>quibim.dcm4che</groupId>
     <version>5.10.5</version>
     <relativePath>..</relativePath>
   </parent>
@@ -20,13 +20,13 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-conf-api</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-net-hl7</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>

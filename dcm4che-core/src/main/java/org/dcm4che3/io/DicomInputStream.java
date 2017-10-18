@@ -148,8 +148,17 @@ public class DicomInputStream extends FilterInputStream
     }
 
     public DicomInputStream(File file) throws IOException {
-        this(new FileInputStream(file));
+        super(new BufferedInputStream(new FileInputStream(file)));
         uri = file.toURI().toString();
+        try {
+        	guessTransferSyntax();
+        }catch(IOException ioException) {
+        	try {
+				if(this.in != null)
+					this.in.close();
+			}catch(Exception ignore) {} 
+			throw ioException;
+        } 
     }
 
     public final String getTransferSyntax() {
@@ -834,5 +843,42 @@ public class DicomInputStream extends FilterInputStream
         this.bigEndian = false;
         this.explicitVR = false;
         return true;
+    }
+    
+    public static final void main(String ... args) {
+    	String path = "D:\\pruebas\\Brain_TeraRecon\\";//00001_1.3.12.2.1107.5.99.2.16117.30000014072914340275000002582.dcm";
+    		File f = new File(path);
+    		int count = 0;
+    		for(File dcm:f.listFiles()) {
+    			DicomInputStream dis = null;
+    			try {
+    				dis = new DicomInputStream(dcm);
+    				Attributes fmi = dis.readFileMetaInformation();
+        			Attributes ds = dis.readDataset(-1,-1);
+					dis.close();
+					fmi.setString(Tag.MediaStorageSOPInstanceUID, ElementDictionary.vrOf(Tag.MediaStorageSOPInstanceUID,null), ds.getString(Tag.SOPInstanceUID));
+	    			File out = new File (path + "results\\"+ count + ".dcm");
+	    			DicomOutputStream dos = new DicomOutputStream(out);
+//	    			dos.writeFileMetaInformation(fmi);
+	    			dos.writeDataset(fmi, ds);
+	    			dos.flush();
+	    			dos.close();
+	    			count++;
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+    			
+    		}
+//			DicomInputStream dis = new DicomInputStream(new File(path));
+//			StringBuilder sb = new StringBuilder();
+//			dis.getFileMetaInformation().toStringBuilder(sb);
+//			System.out.println("\nFileMetaInformation:\n" + sb.toString());
+//			
+//			sb = new StringBuilder();
+//			dis.readDataset(-1,-1).toStringBuilder(sb);
+//			System.out.println("\nDataset:\n" + sb.toString());
+//			
+//			System.out.println("\nTransferSyntaxUID:\n"+dis.getTransferSyntax());
+    	
     }
 }

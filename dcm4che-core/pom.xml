@@ -40,7 +40,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <artifactId>dcm4che-parent</artifactId>
-    <groupId>org.dcm4che</groupId>
+    <groupId>quibim.dcm4che</groupId>
     <version>5.10.5</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -249,12 +249,12 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-dict</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-test-data</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

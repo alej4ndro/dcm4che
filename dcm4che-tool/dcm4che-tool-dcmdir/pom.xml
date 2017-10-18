@@ -41,7 +41,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>dcm4che-tool</artifactId>
-    <groupId>org.dcm4che.tool</groupId>
+    <groupId>quibim.dcm4che.tool</groupId>
     <version>5.10.5</version>
   </parent>
   <artifactId>dcm4che-tool-dcmdir</artifactId>
@@ -49,12 +49,12 @@
   <description>DICOM File-Set Reader/Creator/Updater</description>
   <dependencies>
     <dependency>
-      <groupId>org.dcm4che</groupId>
+      <groupId>quibim.dcm4che</groupId>
       <artifactId>dcm4che-core</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.dcm4che.tool</groupId>
+      <groupId>quibim.dcm4che.tool</groupId>
       <artifactId>dcm4che-tool-common</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>

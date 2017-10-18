@@ -110,61 +110,61 @@
     <dependencySet>
       <outputDirectory>lib</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-audit</include>
-        <include>org.dcm4che:dcm4che-conf-api</include>
-        <include>org.dcm4che:dcm4che-conf-api-hl7</include>
-        <include>org.dcm4che:dcm4che-conf-ldap</include>
-        <include>org.dcm4che:dcm4che-conf-ldap-audit</include>
-        <include>org.dcm4che:dcm4che-conf-ldap-hl7</include>
-        <include>org.dcm4che:dcm4che-conf-ldap-imageio</include>
-        <include>org.dcm4che:dcm4che-core</include>
-        <include>org.dcm4che:dcm4che-emf</include>
-        <include>org.dcm4che:dcm4che-hl7</include>
-        <include>org.dcm4che:dcm4che-image</include>
-        <include>org.dcm4che:dcm4che-imageio</include>
-        <include>org.dcm4che:dcm4che-imageio-rle</include>
-        <include>org.dcm4che:dcm4che-json</include>
-        <include>org.dcm4che:dcm4che-mime</include>
-        <include>org.dcm4che:dcm4che-net</include>
-        <include>org.dcm4che:dcm4che-net-audit</include>
-        <include>org.dcm4che:dcm4che-net-hl7</include>
-        <include>org.dcm4che:dcm4che-soundex</include>
-        <include>org.dcm4che.tool:dcm4che-tool-common</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcmdump</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcm2dcm</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcm2jpg</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcm2json</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcm2xml</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcmdir</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcmldap</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcmqrscp</include>
-        <include>org.dcm4che.tool:dcm4che-tool-dcmvalidate</include>
-        <include>org.dcm4che.tool:dcm4che-tool-emf2sf</include>
-        <include>org.dcm4che.tool:dcm4che-tool-findscu</include>
-        <include>org.dcm4che.tool:dcm4che-tool-getscu</include>
-        <include>org.dcm4che.tool:dcm4che-tool-hl72xml</include>
-        <include>org.dcm4che.tool:dcm4che-tool-hl7pix</include>
-        <include>org.dcm4che.tool:dcm4che-tool-hl7rcv</include>
-        <include>org.dcm4che.tool:dcm4che-tool-hl7snd</include>
-        <include>org.dcm4che.tool:dcm4che-tool-stowrs</include>
-        <include>org.dcm4che.tool:dcm4che-tool-ianscp</include>
-        <include>org.dcm4che.tool:dcm4che-tool-ianscu</include>
-        <include>org.dcm4che.tool:dcm4che-tool-json2dcm</include>
-        <include>org.dcm4che.tool:dcm4che-tool-json2index</include>
-        <include>org.dcm4che.tool:dcm4che-tool-json2rst</include>
-        <include>org.dcm4che.tool:dcm4che-tool-jpg2dcm</include>
-        <include>org.dcm4che.tool:dcm4che-tool-mkkos</include>
-        <include>org.dcm4che.tool:dcm4che-tool-movescu</include>
-        <include>org.dcm4che.tool:dcm4che-tool-mppsscp</include>
-        <include>org.dcm4che.tool:dcm4che-tool-mppsscu</include>
-        <include>org.dcm4che.tool:dcm4che-tool-storescp</include>
-        <include>org.dcm4che.tool:dcm4che-tool-storescu</include>
-        <include>org.dcm4che.tool:dcm4che-tool-stgcmtscu</include>
-        <include>org.dcm4che.tool:dcm4che-tool-swappxdata</include>
-        <include>org.dcm4che.tool:dcm4che-tool-syslog</include>
-        <include>org.dcm4che.tool:dcm4che-tool-syslogd</include>
-        <include>org.dcm4che.tool:dcm4che-tool-xml2dcm</include>
-        <include>org.dcm4che.tool:dcm4che-tool-xml2hl7</include>
+        <include>quibim.dcm4che:dcm4che-audit</include>
+        <include>quibim.dcm4che:dcm4che-conf-api</include>
+        <include>quibim.dcm4che:dcm4che-conf-api-hl7</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap-audit</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap-hl7</include>
+        <include>quibim.dcm4che:dcm4che-conf-ldap-imageio</include>
+        <include>quibim.dcm4che:dcm4che-core</include>
+        <include>quibim.dcm4che:dcm4che-emf</include>
+        <include>quibim.dcm4che:dcm4che-hl7</include>
+        <include>quibim.dcm4che:dcm4che-image</include>
+        <include>quibim.dcm4che:dcm4che-imageio</include>
+        <include>quibim.dcm4che:dcm4che-imageio-rle</include>
+        <include>quibim.dcm4che:dcm4che-json</include>
+        <include>quibim.dcm4che:dcm4che-mime</include>
+        <include>quibim.dcm4che:dcm4che-net</include>
+        <include>quibim.dcm4che:dcm4che-net-audit</include>
+        <include>quibim.dcm4che:dcm4che-net-hl7</include>
+        <include>quibim.dcm4che:dcm4che-soundex</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-common</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcmdump</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcm2dcm</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcm2jpg</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcm2json</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcm2xml</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcmdir</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcmldap</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcmqrscp</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-dcmvalidate</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-emf2sf</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-findscu</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-getscu</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-hl72xml</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-hl7pix</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-hl7rcv</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-hl7snd</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-stowrs</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-ianscp</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-ianscu</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-json2dcm</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-json2index</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-json2rst</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-jpg2dcm</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-mkkos</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-movescu</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-mppsscp</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-mppsscu</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-storescp</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-storescu</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-stgcmtscu</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-swappxdata</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-syslog</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-syslogd</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-xml2dcm</include>
+        <include>quibim.dcm4che.tool:dcm4che-tool-xml2hl7</include>
         <include>org.dcm4che.tool.ihe:dcm4che-tool-ihe-modality</include>
         <include>com.sun.media:jai_imageio</include>
         <include>com.sun.media:clibwrapper_jiio</include>
@@ -179,7 +179,7 @@
     <dependencySet>
       <outputDirectory>js</outputDirectory>
       <includes>
-        <include>org.dcm4che:dcm4che-js-dict</include>
+        <include>quibim.dcm4che:dcm4che-js-dict</include>
       </includes>
       <unpack>true</unpack>
       <useProjectArtifact>false</useProjectArtifact>

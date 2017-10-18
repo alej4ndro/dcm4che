@@ -113,6 +113,7 @@ public class StoreSCP {
                         filePathFormat == null
                             ? iuid
                             : filePathFormat.format(parse(file))));
+                System.out.println("Received file. Metadata: " + rq + ", res " + rsp);
             } catch (Exception e) {
                 deleteFile(as, file);
                 throw new DicomServiceException(Status.ProcessingFailure, e);
