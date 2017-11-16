@@ -101,17 +101,21 @@ public abstract class DicomFiles {
         } else {
             DicomInputStream in = null;
             try {
-                in = new DicomInputStream(f);
-                in.setIncludeBulkData(IncludeBulkData.NO);
-                Attributes fmi = in.readFileMetaInformation();
-                long dsPos = in.getPosition();
-                Attributes ds = in.readDataset(-1, Tag.PixelData);
-                if (fmi == null || !fmi.containsValue(Tag.TransferSyntaxUID)
-                        || !fmi.containsValue(Tag.MediaStorageSOPClassUID)
-                        || !fmi.containsValue(Tag.MediaStorageSOPInstanceUID))
-                    fmi = ds.createFileMetaInformation(in.getTransferSyntax());
-                boolean b = scb.dicomFile(f, fmi, dsPos, ds);
-                if (printout)System.out.print(b ? '.' : 'I');
+            	try {
+            		in = new DicomInputStream(f);
+            	} catch(Exception ignore) {}
+            	if(in != null) {
+                     in.setIncludeBulkData(IncludeBulkData.NO);
+                     Attributes fmi = in.readFileMetaInformation();
+                     long dsPos = in.getPosition();
+                     Attributes ds = in.readDataset(-1, Tag.PixelData);
+                     if (fmi == null || !fmi.containsValue(Tag.TransferSyntaxUID)
+                             || !fmi.containsValue(Tag.MediaStorageSOPClassUID)
+                             || !fmi.containsValue(Tag.MediaStorageSOPInstanceUID))
+                         fmi = ds.createFileMetaInformation(in.getTransferSyntax());
+                     boolean b = scb.dicomFile(f, fmi, dsPos, ds);
+                     if (printout)System.out.print(b ? '.' : 'I');	
+            	}
             } catch (Exception e) {
                 System.out.println();
                 System.out.println("Failed to scan file " + f + ": " + e.getMessage());
